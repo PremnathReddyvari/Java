@@ -16,9 +16,9 @@ public class DOB {
 		LocalDate birthday = LocalDate.of(Integer.parseInt(split1[2]), Integer.parseInt(split1[1]),
 				Integer.parseInt(split1[0]));
 		Period p = Period.between(birthday, today);
-		System.out.println(p.getDays() + " years");
+		System.out.println(p.getDays() + " days");
 		System.out.println(p.getMonths() + " months");
-		System.out.println(p.getYears() + " days");
+		System.out.println(p.getYears() + " years");
 	}
 
 }
