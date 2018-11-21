@@ -15,13 +15,13 @@ public class StudentMaintanance {
 		String a = scanner.nextLine();
 		/* a.replaceAll("name", ""); */
 		String output = a.replaceAll("\\b\\w{1,2}\\s\\s?", "");
-		output=output.replaceAll("( )+", " ");		
+			
 		for(int i=0;i<removing.length;i++){
 			if(output.contains(removing[i])){
 				System.out.println("inside if");
 				output=output.replaceAll(removing[i], "");
 			}
-		}
+		}output=output.replaceAll("( )+", " ");	
 		
 		System.out.println(output);
 
@@ -53,67 +53,123 @@ public class StudentMaintanance {
 		Student s=new Student();
 		int j=0;
 		System.out.println("Switch Begins");
-		do{
+		do{System.out.println("times of "+j);
 			switch(str1[j]){
 			case "first":
+				System.out.println("line no 59 inside first switch");
+				if(j==0){
 				System.out.println("first " +str1[j+1]);
-				s.setFirstname(str1[j+1]);
+				s.setFirstname(str1[j+1]);}
+				else{
+					System.out.println("first "+str1[j-1]);
+					s.setFirstname(str1[j-1]);
+				}
 				break;
 			case "last":
+				if(j==0)
 				s.setLastname(str1[j+1]);
+				else
+					s.setLastname(str1[j-1]);
 				break;
 			case "password":
+				if(j==0)
 				s.setPassword(str1[j+1]);
+				else
+					s.setPassword(str1[j-1]);
 				break;
 			case "email":
+				if(j==0)
 				s.setEmailid(str1[j+1]);
+				else
+					s.setEmailid(str1[j-1]);
 				break;
-			}
+			}j++;
+		}while(j<str1.length);j=0;
+		do{
 			switch(str2[j]){
 			case "first":
+				if(j==0)
 				s.setFirstname(str2[j+1]);
+				else
+				s.setFirstname(str2[j-1]);
 				break;
 			case "last":
+				if(j==0){
 				System.out.println("last");
-				s.setLastname(str2[j+1]);
+				s.setLastname(str2[j+1]);}else
+					s.setLastname(str2[j-1]);
 				break;
 			case "password":
+				if(j==0)
 				s.setPassword(str2[j+1]);
+				else
+				s.setPassword(str2[j-1]);
 				break;
 			case "email":
+				if(j==0)
 				s.setEmailid(str2[j+1]);
+				else
+					s.setEmailid(str2[j-1]);
 				break;
-			}
+			}j++;
+		}while(j<str1.length);j=0;
+		do{
 			switch(str3[j]){
 			case "first":
+				if(j==0)
+				s.setFirstname(str3[j+1]);
+				else
 				s.setFirstname(str3[j+1]);
 				break;
 			case "last":
+				if(j==0)
 				s.setLastname(str3[j+1]);
+				else
+					s.setLastname(str3[j-1]);
 				break;
 			case "password":
+				if(j==0)
 				s.setPassword(str3[j+1]);
+				else
+				s.setPassword(str3[j-1]);
 				break;
 			case "email":
+				if(j==0)
 				s.setEmailid(str3[j+1]);
+				else
+				s.setEmailid(str3[j-1]);
 				break;
-			}
+			}j++;
+		}while(j<str1.length);j=0;
+		do{
 			switch(str4[j]){
 			case "first":
+				if(j==0)
 				s.setFirstname(str4[j+1]);
+				else
+				s.setFirstname(str4[j-1]);
 				break;
 			case "last":
+				if(j==0)
 				s.setLastname(str4[j+1]);
+				else
+					s.setLastname(str4[j-1]);
 				break;
 			case "password":
+				if(j==0)
 				s.setPassword(str4[j+1]);
+				else
+					s.setPassword(str4[j-1]);
 				break;
 			case "email":
+				if(j==0)
+				s.setEmailid(str4[j+1]);
+				else
 				s.setEmailid(str4[j+1]);
 				break;
 			}
 			j++;
-		}while(j<str1.length-1);
+		}while(j<str1.length);
 		System.out.println("Student Object has been following...");
 		System.out.println("FirstName "+s.getFirstname()+" Last Name "+s.getLastname()+" Email "+s.getEmailid()+" Password "+s.getPassword());
 		/*while(j<ihm.size()){
